@@ -1,3 +1,22 @@
-// Place all the styles related to the movies controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.all-movies-container{
+  display: flex;
+  width: 800px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+
+.movie-image-container{
+  width: 200px;
+  border: 3px solid black;
+  margin-top: 30px;
+}
+
+.movie-image{
+  width: 200px;
+}
