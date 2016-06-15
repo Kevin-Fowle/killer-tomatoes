@@ -1,33 +1,19 @@
-<div class="movie-info-container">
-  <div class="movie-header">
-    <h1><%= @movie.title %></h1>
-  </div>
-
-  <div class="movie-profile-pic">
-    <img src="<%=@movie.image %>" alt="<%=@movie.title %>" />
-  </div>
-
-  <div class="movie-description">
-    <p>
-      <%= @movie.description %>
-    </p>
-  </div>
-</div>
+<%= render 'movieinfo' %>
 
 <div class="reviews-container">
   <div class="review-header">
     <h2>Reviews</h2>
   </div>
-
+<%= link_to 'New Review', new_movie_review_path(@movie) %>
 <% @reviews.each do |review| %>
   <div class="indiv-review-box">
 
-    <div class="review-description">
-      <%= review.description %>
+    <div class="review-body">
+      <%= review.body %>
     </div>
 
     <div class="review-author">
-      <%= review.reviewer_id %>
+      <%= review.reviewer.name %>
     </div>
 
   </div>
