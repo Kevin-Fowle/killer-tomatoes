@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <% if logged_in? %>
+      <td><%= link_to("#{current_user.name}", user_path(current_user))%></td>
+      <td><%= link_to("sign out", session_path(current_user), method: :delete, data: {confirm: 'Are you sure you want to log out?'}) %></td>
+    <% else %>
+      <td><%= link_to("register", new_user_path)%></td>
+      <td><%= link_to("login", new_session_path)%></td>
+    <% end %>
+  </tr>
+</table>

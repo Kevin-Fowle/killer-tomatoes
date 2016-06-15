@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  resources :user
+  resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
   root 'movies#index'
