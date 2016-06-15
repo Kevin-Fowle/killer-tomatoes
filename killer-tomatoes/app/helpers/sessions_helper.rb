@@ -1,4 +1,4 @@
-helpers do
+module SessionsHelper
 
   def logged_in?
     session[:user_id] != nil
