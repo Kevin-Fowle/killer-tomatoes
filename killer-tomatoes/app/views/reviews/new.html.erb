@@ -1,0 +1,10 @@
+<%= render '/movies/movieinfo' %>
+
+<%= form_for :review, url: '/movies/@movie.id' do |f| %>
+
+  Review Title: <%= f.text_area :title %>
+  Text: <%= f.text_area :body %>
+  Score: <%= f.text_area :score %>
+  <%= f.submit "Review" %>
+
+<% end %>

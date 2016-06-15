@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+
   get 'welcome/index'
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
-  root 'movies#index'
 
-  resources :movie, only: [:show]
+  resources :movies, only: [:show] do
+    resources :reviews, only: [:show, :new, :create]
+  end
+  root 'movies#index'
 
 end

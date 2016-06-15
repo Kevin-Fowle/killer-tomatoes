@@ -1,0 +1,21 @@
+<%= render 'movieinfo' %>
+
+<div class="reviews-container">
+  <div class="review-header">
+    <h2>Reviews</h2>
+  </div>
+<%= link_to 'New Review', new_movie_review_path(@movie) %>
+<% @reviews.each do |review| %>
+  <div class="indiv-review-box">
+
+    <div class="review-body">
+      <%= review.body %>
+    </div>
+
+    <div class="review-author">
+      <%= review.reviewer.name %>
+    </div>
+
+  </div>
+  <% end %>
+</div>
