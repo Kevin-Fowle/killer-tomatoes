@@ -1,7 +1,8 @@
 <div class="all-movies-container">
   <% @movies.each do |movie| %>
     <div class='movie-image-container'>
-      <img src= '<%= movie.image %>' class='movie-image' alt= '<%= movie.title %>' />
+      <a href="/movies/<%=movie.id%> "><img src= '<%= movie.image %>' class='movie-image' alt= '<%= movie.title %>' /></a>
+      <% link_to "<img src= 'movie.image' class='movie-image' alt= 'movie.title'/>", movie_path(movie) %>
     </div>
   <% end %>
 </div>
