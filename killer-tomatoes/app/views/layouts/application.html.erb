@@ -7,8 +7,10 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<header>
 <%= render "layouts/nav" %>
+</header>
+<body>
 <%= yield %>
 
 </body>

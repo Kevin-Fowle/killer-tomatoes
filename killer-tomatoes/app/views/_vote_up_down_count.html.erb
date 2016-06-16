@@ -10,7 +10,7 @@
       </p>
     </li>
 
-  <li> <%= review.votes_for.size %> </li>
+  <li> <%= review.get_upvotes.size - review.get_downvotes.size %> </li>
 
     <li>
       <p>
