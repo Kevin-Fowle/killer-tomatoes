@@ -6,6 +6,7 @@
   Text: <%= f.text_area :body %>
   Score: <%= f.text_area :score %>
   <%= f.hidden_field :movie_id, value: @movie.id %>
+  <%= f.hidden_field :reviewer_id, value: current_user.id %>
   <%= f.submit "Review" %>
 
 <% end %>
