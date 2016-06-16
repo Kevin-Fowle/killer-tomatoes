@@ -1,22 +1,26 @@
 <div class="voting_buttons">
   <ul id="vote-button-links">
 
-    <button >
     <li>
       <p>
-        upvote <%= review.liked_by current_user %>
+        <%= link_to like_movie_review_path(@movie, review), method: :put do %>
+        Upvote
+        <%= review.get_upvotes.size %>
+        <%end  %>
       </p>
     </li>
-    </button>
-  <li> votes go here </li>
 
-<!--  Need to implement vote button linked to function-->
-    <button>
+
+  <li> <%= review.rating %> </li>
+
     <li>
-    <p>
-      downvote <%= review.downvote_from current_user %>
-    </p>
+      <p>
+        <%= link_to dislike_movie_review_path(@movie, review), method: :put do %>
+        downvote
+        <%= review.get_downvotes.size %>
+        <%end  %>
+      </p>
 
     </li>
-  </button>
+
 </div>

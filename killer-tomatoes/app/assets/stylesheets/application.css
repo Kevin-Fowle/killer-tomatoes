@@ -13,33 +13,72 @@
  *= require_tree .
  *= require_self
  */
+header{
 
- 
-
-body{
-  font-family: 'Lato', 'Arial', sans-serif;
+  font-family: Helvetica Neue;
+  font-size: 14px;
   margin: auto;
-  max-width: 1000px;
+  width: 900px;
+  line-height: 145%;
+}
+
+body {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  margin: auto;
+  width: 900px;
+  line-height: 145%;
+
+}
+
+#vote-button-links {
+    list-style-type: none
 }
 
 a {
   text-decoration: none;
 }
 
-.nav-link{
-  text-align: right;
+.nav-bar {
+  width: inherit;
+  height: 120px;
+  background: #c90404;
+  position: fixed;
   display: flex;
   justify-content: flex-end;
 }
 
-.nav-bar{
 
-  background-color: #e00000;
-  vertical-align: top;
+.logo {
+  padding: 15px;
+  width: 300px;
+  background: pink;
+}
+
+
+#logo_nav {
+  width: 250px;
+  height:120px;
+  background-color: #c90404;
+  position:fixed;
+  top:0;
 }
 
 table {
+  margin-top: 48px;
 }
-/*.nav-table{
-  text-align: left;
-}*/
+
+.nav-buttons {
+
+}
+
+.nav-buttons > a {
+  font-size: 16px;
+  padding: 10px;
+  color: white;
+}
+
+.nav-buttons > a:hover {
+  background: white;
+  color: black;
+}

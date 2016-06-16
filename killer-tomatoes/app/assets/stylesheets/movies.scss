@@ -1,6 +1,6 @@
 .all-movies-container{
   display: flex;
-  width: 1000px;
+  width: 900px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -8,6 +8,7 @@
 
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+  padding-top: 100px;
 }
 
 
