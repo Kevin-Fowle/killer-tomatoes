@@ -20,8 +20,7 @@
 
         <td>
           <div>
-            ------------------------
-            <h4 class="review-title"> <%= review.title %> </h4>
+            <h4 class="review-title"> <%= link_to review.title, movie_review_path(@movie, review) %> </h4>
           </div>
         </td>
       </tr>

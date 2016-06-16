@@ -1,6 +1,6 @@
 .all-movies-container{
   display: flex;
-  width: 800px;
+  width: 1000px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -23,4 +23,25 @@
 
 .movie-profile-pic{
   width: 300px;
+}
+
+.movie-description-container{
+  width: 700px;
+  float: right;
+
+
+}
+
+.movie-description{
+  margin-top: 0px;
+}
+
+.movie-profile-pic-container{
+  width: 300px;
+  float: right;
+}
+
+.movie-header{
+  text-align: center;
+
 }

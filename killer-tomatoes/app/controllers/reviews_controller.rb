@@ -21,6 +21,20 @@ class ReviewsController < ApplicationController
     @comments = @review.comments
   end
 
+  def upvote
+    @movie = Movie.find(params[:movie_id])
+    @review = Review.find(params[:id])
+    @review.upvote_by current_user
+    redirect_to movie_path(@movie)
+  end
+
+  def downvote
+    @movie = Movie.find(params[:movie_id])
+    @review = Review.find(params[:id])
+    @review.downvote_by current_user
+    redirect_to movie_path(@movie)
+  end
+
   private
   def review_params
     params.require(:review).permit(:title, :body, :score, :movie_id, :reviewer_id)

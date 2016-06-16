@@ -1,0 +1,28 @@
+<div class="voting_buttons">
+  <ul id="vote-button-links">
+
+
+    <li>
+      <p>
+        <%= link_to like_movie_review_path(@movie, review), method: :put do %>
+        Upvote
+        <%= review.get_upvotes.size %>
+        <%end  %>
+      </p>
+    </li>
+
+
+  <li> <%= review.votes_for.size %> </li>
+
+
+    <li>
+    <p>
+      <%= link_to dislike_movie_review_path(@movie, review), method: :put do %>
+      downvote
+      <%= review.get_downvotes.size %>
+      <%end  %>
+    </p>
+
+    </li>
+
+</div>
