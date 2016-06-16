@@ -13,9 +13,15 @@
     </div>
 
     <div class="review-author">
-      <%= review.reviewer.name %>
+      Written By: <%= review.reviewer.name %>
     </div>
 
+    <div class="review-score">
+      Score: <%= review.score%>/10
+    </div>
+    
+
+    <%= link_to "Comment", new_movie_review_comment_path(@movie, review) %>
   </div>
   <% end %>
 </div>
