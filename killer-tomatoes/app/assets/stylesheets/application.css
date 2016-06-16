@@ -14,19 +14,20 @@
  *= require_self
  */
 
- 
+
 
 body{
-  font-family: 'Lato', 'Arial', sans-serif;
+  font-family: Helvetica Neue;
+  font-size: 14px;
   margin: auto;
   max-width: 1000px;
+  line-height: 145%;
 }
 
-<<<<<<< HEAD
 #vote-button-links {
     list-style-type: none
 }
-=======
+
 a {
   text-decoration: none;
 }
@@ -35,17 +36,29 @@ a {
   text-align: right;
   display: flex;
   justify-content: flex-end;
+
 }
 
 .nav-bar{
-
   background-color: #e00000;
   vertical-align: top;
+  border-radius: 8px;
 }
 
-table {
+.nav-buttons {
+  /*border: 1px solid white;*/
+    background: #e00000;
+    width: 100px;
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
 }
-/*.nav-table{
-  text-align: left;
-}*/
->>>>>>> master
+
+.nav-buttons:hover {
+  background: white;
+}
+
+.nav-buttons > a {
+  color: #333333;
+}
