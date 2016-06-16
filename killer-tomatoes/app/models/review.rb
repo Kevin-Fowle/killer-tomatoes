@@ -17,4 +17,12 @@ class Review < ActiveRecord::Base
     self.get_upvotes.size - self.get_downvotes.size
   end
 
+  def trusted
+    self.rating >= 5
+  end
+
+  def untrusted
+    self.rating <= -5
+  end
+
 end
