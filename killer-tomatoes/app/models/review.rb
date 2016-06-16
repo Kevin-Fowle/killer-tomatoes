@@ -8,11 +8,13 @@ class Review < ActiveRecord::Base
   has_many :comments
   has_many :commenters, through: :comments
 
-  def qualified
-    self.votes_for.size >= 5
-  end
+  # @Lucas - future_implementation, hiding of comments below a certain threshold
+  # def qualified
+  #   self.votes_for.size >= 5
+  # end
 
-  def score
+  def rating
     self.get_upvotes.size - self.get_downvotes.size
   end
+
 end
