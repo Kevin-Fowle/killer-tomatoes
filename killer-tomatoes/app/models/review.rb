@@ -7,4 +7,12 @@ class Review < ActiveRecord::Base
   has_many :raters, through: :ratings
   has_many :comments
   has_many :commenters, through: :comments
+
+  def qualified
+    self.votes_for.size >= 5
+  end
+
+  def score
+    self.get_upvotes.size - self.get_downvotes.size
+  end
 end
