@@ -1,7 +1,0 @@
-<%= render '/movies/movieinfo' %>
-
-<%= form_for :comment, url: movie_review_comments_path(@movie, @review) do |f| %>
-
-  Comment Body: <%= f.text_area :body %>
-  <%= f.submit "Comment" %>
-<% end %>

@@ -19,9 +19,9 @@
     <div class="review-score">
       Score: <%= review.score%>/10
     </div>
-    
 
-    <%= link_to "Comment", new_movie_review_comment_path(@movie, review) %>
+
+    <%= link_to "Comment", movie_review_path(@movie, review) %>
   </div>
   <% end %>
 </div>
