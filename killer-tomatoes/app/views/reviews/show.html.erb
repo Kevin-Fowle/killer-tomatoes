@@ -27,17 +27,18 @@
   <% @comments.each do |comment| %>
   <div class="indiv-comment-container">
     <div class="comment-body">
-      Body: <%= comment.body %>
+      <%= comment.body %>
     </div>
     <div class="comment-author">
-      By: <%= comment.commenter.name %>
+      By: <%= link_to "#{comment.commenter.name}", user_path(comment.commenter) %>
     </div>
   </div>
 </div>
 <% end %>
 <div class="new-comment-container">
   <%= form_for :comment, url: movie_review_comments_path(@movie, @review) do |f| %>
-    Comment Body: <%= f.text_area :body %>
+    Comment:<br>
+    <%= f.text_area :body%><br>
     <%= f.submit "Comment" %>
   <% end %>
 </div>
