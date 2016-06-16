@@ -13,15 +13,22 @@
  *= require_tree .
  *= require_self
  */
+header{
 
-
-
-body{
   font-family: Helvetica Neue;
   font-size: 14px;
   margin: auto;
-  max-width: 1000px;
+  width: 900px;
   line-height: 145%;
+}
+
+body {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  margin: auto;
+  width: 900px;
+  line-height: 145%;
+
 }
 
 #vote-button-links {
@@ -32,33 +39,46 @@ a {
   text-decoration: none;
 }
 
-.nav-link{
-  text-align: right;
+.nav-bar {
+  width: inherit;
+  height: 120px;
+  background: #c90404;
+  position: fixed;
   display: flex;
   justify-content: flex-end;
-
 }
 
-.nav-bar{
-  background-color: #e00000;
-  vertical-align: top;
-  border-radius: 8px;
+
+.logo {
+  padding: 15px;
+  width: 300px;
+  background: pink;
+}
+
+
+#logo_nav {
+  width: 250px;
+  height:120px;
+  background-color: #c90404;
+  position:fixed;
+  top:0;
+}
+
+table {
+  margin-top: 48px;
 }
 
 .nav-buttons {
-  /*border: 1px solid white;*/
-    background: #e00000;
-    width: 100px;
-    text-align: center;
-    height: 40px;
-    font-size: 20px;
-    border-radius: 10px;
-}
 
-.nav-buttons:hover {
-  background: white;
 }
 
 .nav-buttons > a {
-  color: #333333;
+  font-size: 16px;
+  padding: 10px;
+  color: white;
+}
+
+.nav-buttons > a:hover {
+  background: white;
+  color: black;
 }
