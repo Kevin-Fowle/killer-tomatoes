@@ -1,0 +1,14 @@
+<h1> <%= @user.name %>'s Profile </h1>
+
+<p><%= @user.created_at %></p>
+
+<h2>Your Ratings</h2>
+
+<h4>Most Recently Rated</h4>
+<table>
+  <tr>
+    <%= @user.reviews.sort { |a,b| b <=> a }.each do |review| %>
+      <td><%= review.movie.image %></td>
+    <% end %>
+  </tr>
+</table>
