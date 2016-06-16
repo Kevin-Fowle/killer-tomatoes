@@ -1,0 +1,22 @@
+<div class="voting_buttons">
+  <ul id="vote-button-links">
+
+    <button >
+    <li>
+      <p>
+        upvote <%= review.liked_by current_user %>
+      </p>
+    </li>
+    </button>
+  <li> votes go here </li>
+
+<!--  Need to implement vote button linked to function-->
+    <button>
+    <li>
+    <p>
+      downvote <%= review.downvote_from current_user %>
+    </p>
+
+    </li>
+  </button>
+</div>
