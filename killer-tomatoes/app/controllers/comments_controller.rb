@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   def new
+    @comments = Comment.all
     @review = Review.find(params[:review_id])
     @movie = Movie.find(params[:movie_id])
     @comment = Comment.new
@@ -13,7 +14,7 @@ class CommentsController < ApplicationController
     @comment.review = @review
 
     if @comment.save
-      redirect_to(@movie)
+      redirect_to movie_review_path(@movie, @review)
     else
       render 'new'
     end
