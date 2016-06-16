@@ -18,3 +18,7 @@ body{
   margin: auto;
   max-width: 1000px;
 }
+
+#vote-button-links {
+    list-style-type: none
+}

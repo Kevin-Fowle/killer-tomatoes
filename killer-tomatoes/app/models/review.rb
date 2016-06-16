@@ -1,4 +1,4 @@
-0class Review < ActiveRecord::Base
+class Review < ActiveRecord::Base
   acts_as_votable
 
   belongs_to :reviewer, class_name: "User"
