@@ -18,3 +18,25 @@ body{
   margin: auto;
   max-width: 1000px;
 }
+
+a {
+  text-decoration: none;
+}
+
+.nav-link{
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-bar{
+
+  background-color: #e00000;
+  vertical-align: top;
+}
+
+table {
+}
+/*.nav-table{
+  text-align: left;
+}*/
