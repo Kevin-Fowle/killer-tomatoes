@@ -1,20 +1,19 @@
 <div class="nav-bar">
-
-  <a href="/"><img src="http://killertomatoes.com/app/uploads/2013/08/AKT-just-KT-logo_new1.png" alt="" /></a>
-
-<div class="nav-link">
-  <table>
-    <tr>
-      <div class="nav-link">
-      <% if logged_in? %>
-        <td class="nav-buttons"> <%= link_to("#{current_user.name}", user_path(current_user))%></td>
-        <td class="nav-buttons"> <%= link_to("Logout", session_path(current_user), method: :delete, data: {confirm: 'Are you sure you want to log out?'}) %></td>
-      <% else %>
-        <td class="nav-buttons"> <%= link_to("Register", new_user_path)%></td>
-        <td class="nav-buttons"> <%= link_to("Login", new_session_path)%></td>
-      <% end %>
-      <td class="nav-buttons"><%= link_to("Home", root_path) %></td>
-    </tr>
-  </table>
+    <table>
+      <tr>
+        <% if logged_in? %>
+          <td class="nav-buttons"> <%= link_to("#{current_user.name}", user_path(current_user))%></td>
+          <td class="nav-buttons"> <%= link_to("Logout", session_path(current_user), method: :delete, data: {confirm: 'Are you sure you want to log out?'}) %></td>
+        <% else %>
+          <td class="nav-buttons"> <%= link_to("Register", new_user_path)%></td>
+          <td class="nav-buttons"> <%= link_to("Login", new_session_path)%></td>
+        <% end %>
+          <td class="nav-buttons"><%= link_to("Categories", root_path) %></td>
+          <td class="nav-buttons"><%= link_to("Popular", root_path) %></td>
+      </tr>
+    </table>
 </div>
+
+<div >
+    <a href="/"><img id="logo_nav" src="http://killertomatoes.com/app/uploads/2013/08/AKT-just-KT-logo_new1.png" alt="" /></a>
 </div>
