@@ -4,7 +4,7 @@
   </div>
 
   <div class="movie-profile-pic-container">
-    <img src="<%=@movie.image %>" class='movie-profile-pic' alt="<%=@movie.title %>" />
+    <a href="/movies/<%= @movie.id %>"><img src="<%=@movie.image %>" class='movie-profile-pic' alt="<%=@movie.title %>" /></a>
   </div>
 
   <div class="movie-description-container">

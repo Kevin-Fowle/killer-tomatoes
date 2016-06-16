@@ -18,3 +18,27 @@
 .review-score {
 
 }
+
+.indiv-comment-container{
+  margin-top: 50px;
+  background-color: #f2f2f2;
+  width: 650px;
+  padding: 15px;
+
+}
+
+.comment-body{
+  margin-bottom: 10px;
+}
+
+.new-comment-container{
+  margin-top: 20px;
+  margin-bottom: 130px;
+  width: 650px;
+
+}
+
+textarea#comment_body {
+  width: 650px;
+  height: 100px;
+}
