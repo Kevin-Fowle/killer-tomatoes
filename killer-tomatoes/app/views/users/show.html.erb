@@ -8,7 +8,7 @@
 <table>
   <tr>
     <% @user.reviews.limit(5).sort { |a,b| b <=> a }.each do |review| %>
-      <td> <%= link_to(review.title, movie_review_path(review.movie, review)) %><br><img src="<%= review.movie.image %>" alt="Movie Poster" style="width:205px;height300px">  </td>
+      <td><%= link_to(review.title, movie_review_path(review.movie, review)) %><br><img src="<%= review.movie.image %>" alt="Movie Poster" style="width:205px;height300px">  </td>
     <% end %>
   </tr>
 </table>
