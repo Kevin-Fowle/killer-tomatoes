@@ -1,10 +1,12 @@
 <%= render '/movies/movieinfo' %>
 
-<%= form_for :review, url: '/movies/@movie.id' do |f| %>
+<%= form_for :review, url: movie_reviews_path do |f| %>
 
   Review Title: <%= f.text_area :title %>
   Text: <%= f.text_area :body %>
   Score: <%= f.text_area :score %>
+  <%= f.hidden_field :movie_id, value: @movie.id %>
+  <%= f.hidden_field :reviewer_id, value: current_user.id %>
   <%= f.submit "Review" %>
 
 <% end %>
