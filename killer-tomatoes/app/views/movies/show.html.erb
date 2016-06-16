@@ -6,17 +6,15 @@
   <div class="review-header">
     <h2>Reviews</h2>
   </div>
-<% @reviews.each do |review| %>
+
+<% sorted_reviews_by_rating.each do |review| %>
   <div class="indiv-review-box">
 
     <table>
       <tr>
-
         <td>
           <%= render partial: '/vote_up_down_count', :locals => {:review => review} %>
         </td>
-
-
 
         <td>
           <div>
