@@ -14,7 +14,10 @@
  *= require_self
  */
 
+ 
+
 body{
+  font-family: 'Lato', 'Arial', sans-serif;
   margin: auto;
   max-width: 1000px;
 }
