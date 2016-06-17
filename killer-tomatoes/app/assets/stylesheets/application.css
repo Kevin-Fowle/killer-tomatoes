@@ -82,3 +82,7 @@ table {
   background: white;
   color: black;
 }
+
+.under-nav-bar {
+  padding-top: 120px;
+}
