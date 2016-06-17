@@ -68,9 +68,7 @@ But this is about I Love You, Man. The highlight of the movie, for me, is Thomas
 And that is I Love You, Man. It's a rather simple, but funny movie.", score: 7, reviewer_id: 2, movie_id: 1)
 
 User.create(name:'Kanye', email: 'Kanye@kanye.gov', password_digest:'password')
-
 User.create(name:'Gary', email: 'Garybusey@gmail.com', password_digest:'password')
-
 User.create(name:'Homer', email: 'homer@homer.com', password_digest:'password')
 User.create(name:'Marge', email: 'marge@marge.com', password_digest:'password')
 User.create(name:'Bart', email: 'bart@bart.com', password_digest:'password')
@@ -79,3 +77,14 @@ User.create(name:'Maggie', email: 'maggie@maggie.com', password_digest:'password
 User.create(name:'Moe', email: 'moe@moe.com', password_digest:'password')
 User.create(name:'Krusty', email: 'krusty@krusty.com', password_digest:'password')
 User.create(name:'Milhouse', email: 'milhouse@milhouse.com', password_digest:'password')
+
+users = User.all
+movies = Movie.all
+
+reviews = 50.times.map do
+  Review.create!( :title => Faker::Hipster.word,
+                  :body => Faker::Hipster.paragraph(10),
+                  :score => Faker::Numer.between(1,5),
+                  reviewer: users.sample,
+                  movie: movies.sample)
+end
