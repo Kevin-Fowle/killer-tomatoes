@@ -1,12 +1,8 @@
-
-<div class="main-section">
 <%= form_for :user, url: '/users' do |f| %>
-<table>
-  <tr><td>Name:</td><td><%= f.text_field :name %></td></tr>
 
-  <tr><td>Email:</td><td> <%= f.text_field :email %></td></tr>
+  Name: <%= f.text_field :name %>
+  Email: <%= f.text_field :email %>
+  Password: <%= f.password_field :password %>
+  <%= f.submit "Submit", :class => 'form-button' %>
 
-  <tr><td>Password:</td><td> <%= f.password_field :password %></td><td><%= f.submit "Submit" %></td></tr>
-</table>
 <% end %>
-</div>

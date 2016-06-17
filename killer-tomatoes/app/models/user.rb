@@ -2,9 +2,9 @@ class User < ActiveRecord::Base
   acts_as_voter
 
   has_many :reviews, foreign_key: 'reviewer_id'
-  has_many :reviewed_movies, through: :reviews, source: :movies
+  has_many :reviewed_movies, through: :reviews, source: :movie
   has_many :comments, foreign_key: "commenter_id"
-  has_many :ratings, foreign_key: "rater_id"
+  
   has_secure_password
 
   def num_trusted_reviews
@@ -22,16 +22,14 @@ class User < ActiveRecord::Base
   def status
     case
     when net_trust_score >= 10
-      "Gold"
+      "Killer"
     when net_trust_score >= 5
-      "Silver"
+      "Red"
     when net_trust_score <= -10
-      "Untrusted"
+      "Untrustworthy"
     else
-      "Tomato"
+      "Green"
     end
   end
-
-
 
 end

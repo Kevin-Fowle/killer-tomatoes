@@ -59,7 +59,7 @@ a {
   background: pink;
 }
 
-
+/**/
 #logo_nav {
   width: 250px;
   height:120px;
@@ -85,4 +85,8 @@ table {
 .nav-buttons > a:hover {
   background: white;
   color: black;
+}
+
+.under-nav-bar {
+  padding-top: 140px;
 }

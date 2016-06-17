@@ -1,11 +1,20 @@
-<div class="main-section">
-<%= link_to("Logout", session_path(current_user), method: :delete, data: {confirm: 'Are you sure you want to log out?'}) %>
+<div class="under-nav-bar">
+	<%= link_to("Logout", session_path(current_user), method: :delete, data: {confirm: 'Are you sure you want to log out?'}) %>
+	<h1 class="user-interaction-title"> <%= @user.name %>'s Profile </h1>
 
-<h1> <%= @user.name %>'s Profile </h1>
+	<p>User Since: <%= @user.created_at.strftime("%Y-%m-%d") %></p>
 
-<p>User Since: <%= @user.created_at.strftime("%Y-%m-%d") %></p>
+	<h2>Your Ratings</h2>
 
-<h2>Your Ratings</h2>
+	<h4>Most Recently Rated</h4>
+	<table>
+	  <tr>
+	    <% @user.reviews.limit(5).sort { |a,b| b <=> a }.each do |review| %>
+	      <td><%= link_to(review.title, movie_review_path(review.movie, review)) %><br><img src="<%= review.movie.image %>" alt="Movie Poster" style="width:205px;height300px">  </td>
+	    <% end %>
+	  </tr>
+	</table>
+</div>
 
 <h4>Most Recently Rated</h4>
 <table>
