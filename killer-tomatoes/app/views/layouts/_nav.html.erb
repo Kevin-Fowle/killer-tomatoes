@@ -2,13 +2,12 @@
     <table>
       <tr>
         <% if logged_in? %>
-          <td class="nav-buttons"> <%= link_to("#{current_user.name}", user_path(current_user))%></td>
-          <td class="nav-buttons"> <%= link_to("Logout", session_path(current_user), method: :delete, data: {confirm: 'Are you sure you want to log out?'}) %></td>
+          <td class="nav-buttons"> Hello<%= link_to("#{current_user.name}", user_path(current_user))%> | </td>
         <% else %>
-          <td class="nav-buttons"> <%= link_to("Register", new_user_path)%></td>
-          <td class="nav-buttons"> <%= link_to("Login", new_session_path)%></td>
+          <td class="nav-buttons"> <%= link_to("Register", new_user_path)%> | </td>
+          <td class="nav-buttons"> <%= link_to("Login", new_session_path)%> | </td>
         <% end %>
-          <td class="nav-buttons"><%= link_to("Categories", root_path) %></td>
+          <td class="nav-buttons"><%= link_to("Categories", root_path) %> | </td>
           <td class="nav-buttons"><%= link_to("Popular", root_path) %></td>
       </tr>
     </table>

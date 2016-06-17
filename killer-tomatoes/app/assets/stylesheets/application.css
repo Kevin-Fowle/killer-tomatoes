@@ -14,16 +14,9 @@
  *= require_self
  */
 
- .user-form {
-   display: flex;
+ .main-section {
    width: 900px;
-   display: -webkit-box;
-   display: -moz-box;
-   display: -ms-flexbox;
-   display: -webkit-flex;
-   padding-top: 100px;
-   -webkit-flex-flow: row wrap;
-   justify-content: space-around;
+   padding-top: 150px;
  }
 header{
 
