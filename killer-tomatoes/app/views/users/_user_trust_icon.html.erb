@@ -1,10 +1,10 @@
 
-<% if review.reviewer.status == "Gold" %>
+<% if review.reviewer.status == "Killer" %>
   <%= image_tag("killer_tomato_icon.png", size: "35x35", alt: "Gold User") %>
-<% elsif review.reviewer.status == "Silver" %>
+<% elsif review.reviewer.status == "Red" %>
   <%= image_tag("orange_tomato.png", size: "35x35", alt: "Silver User") %>
-<% elsif review.reviewer.status == "Tomato" %>
+<% elsif review.reviewer.status == "Green" %>
   <%= image_tag("green_tomato.png", size: "35x35", alt: "Tomato User") %>
-<% else review.reviewer.status == "Untrusted" %>
+<% else review.reviewer.status == "Untrustworthy" %>
   <%= image_tag("gray_tomato.png", size: "35x35", alt: "Untrusted User") %>
 <%end%>
