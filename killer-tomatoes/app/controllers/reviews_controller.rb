@@ -11,6 +11,7 @@ class ReviewsController < ApplicationController
     if review.save
       redirect_to(@movie)
     else
+      @errors = review.errors.full_messages
       render 'new'
     end
   end
