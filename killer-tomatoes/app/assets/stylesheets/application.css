@@ -55,7 +55,7 @@ a {
   background: pink;
 }
 
-
+/**/
 #logo_nav {
   width: 250px;
   height:120px;
@@ -84,5 +84,5 @@ table {
 }
 
 .under-nav-bar {
-  padding-top: 120px;
+  padding-top: 140px;
 }
