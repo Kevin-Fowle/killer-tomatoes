@@ -67,7 +67,11 @@ textarea#comment_body {
   width: 650px;
   height: 100px;
 }
-
+.vote-container {
+  display: inline-block;
+  float: right;
+  text-align: center;
+}
 
 /*------new review -----------------*/
 

@@ -10,38 +10,31 @@
 
   <% sorted_reviews_by_rating.each do |review| %>
     <div class="indiv-review-box">
+      <div>
+        <h4 class="review-title"> <%= link_to review.title, movie_review_path(@movie, review) %> </h4>
+      </div>
+      <div class="review-score">
+        Score: <%= review.score%>/10
+      </div>
 
-      <table>
-        <tr>
-          <td>
-            <%= render partial: '/vote_up_down_count', :locals => {:review => review} %>
-          </td>
+      <%= render partial: '/users/user_trust_icon', :locals => {:review => review} %>
+      <div class="review-author">
+        Written By: <%= review.reviewer.name %>
+      </div>
 
-          <td>
-            <div>
-              <h4 class="review-title"> <%= link_to review.title, movie_review_path(@movie, review) %> </h4>
-            </div>
-          </td>
-
-          <td>
-            <%= render partial: '/users/user_trust_icon', :locals => {:review => review} %>
-          </td>
-        </tr>
-      </table>
+      <div class="vote-container">
+        <%= render partial: '/vote_up_down_count', :locals => {:review => review} %>
+      </div>
 
       <div class="review-body">
         <%= review.body %>
       </div>
 
-      <div class="review-author">
-        Written By: <%= review.reviewer.name %>
-      </div>
 
-      <div class="review-score">
-        Score: <%= review.score%>/10
-      </div>
 
-      <%= link_to "Comment", movie_review_path(@movie, review) %>
+
+
+      <%= link_to "Comments (#{review.comments.count})", movie_review_path(@movie, review) %>
     </div>
     <% end %>
   </div>
