@@ -17,7 +17,9 @@ Rails.application.routes.draw do
   end
   root 'movies#index'
 
-  resources :reviews do
+  resources :reviews
 
-  end
+  get '/genres/:genre_name', to: 'genres#show', as: 'genre'
+  post '/genres/search', to: "genres#search"
+
 end

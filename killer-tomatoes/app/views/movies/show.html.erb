@@ -1,8 +1,8 @@
 <div class="under-nav-bar">
 <%= render 'movieinfo' %>
-
+<% if logged_in? %>
   <%= link_to 'New Review', new_movie_review_path(@movie) %>
-
+<% end %>
   <div class="reviews-container">
     <div class="review-header">
       <h2>Reviews      </h2>
@@ -24,7 +24,7 @@
           </td>
 
           <td>
-            <%= render partial: '/users/reviewer_trust_icon', :locals => {:review => review} %>
+            <%= render partial: '/users/user_trust_icon', :locals => {:review => review} %>
           </td>
         </tr>
       </table>
