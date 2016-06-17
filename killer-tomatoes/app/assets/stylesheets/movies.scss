@@ -26,10 +26,10 @@
 }
 
 .movie-description-container{
-  width: 700px;
-  float: right;
-
-
+  width: 500px;
+  // float: right;
+  display: inline-block;
+  border-bottom: 2px solid gray;
 }
 
 .movie-description{
@@ -39,6 +39,7 @@
 .movie-profile-pic-container{
   width: 300px;
   float: right;
+  display: inline-block;
 }
 
 .movie-header{

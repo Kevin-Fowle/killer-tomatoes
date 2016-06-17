@@ -90,3 +90,24 @@ table {
 .under-nav-bar {
   padding-top: 140px;
 }
+
+.genre-select{
+  width: 800px;
+  height: 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+select#movie_genre_name{
+  width:300px;
+  font-size: 17px;
+  border: none;
+}
+
+
+.genre-select-button{
+  width: 300px;
+}
+
+/*---------*/
