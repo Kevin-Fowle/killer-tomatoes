@@ -24,11 +24,11 @@ class User < ActiveRecord::Base
 
   def status
     case
-    when net_trust_score >= 10
-      "Killer"
     when net_trust_score >= 5
+      "Killer"
+    when net_trust_score >= 2
       "Red"
-    when net_trust_score <= -10
+    when net_trust_score <= -5
       "Untrustworthy"
     else
       "Green"
