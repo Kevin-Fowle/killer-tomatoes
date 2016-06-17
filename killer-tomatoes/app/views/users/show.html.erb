@@ -1,6 +1,6 @@
 <div class="under-nav-bar">
 	<%= link_to("Logout", session_path(current_user), method: :delete, data: {confirm: 'Are you sure you want to log out?'}) %>
-	<h1 class="user-interaction-title"> <%= @user.name %>'s Profile </h1>
+	<h1 class="user-interaction-title"><%= render 'profile_trust_icon' %> <%= @user.name %>'s Profile </h1>
 
 	<p>User Since: <%= @user.created_at.strftime("%Y-%m-%d") %></p>
 
