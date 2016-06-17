@@ -4,7 +4,7 @@
     <li>
       <p>
         <%= link_to like_movie_review_path(@movie, review), method: :put do %>
-        Upvote
+        	&#x21E7;
         <%= review.get_upvotes.size %>
         <%end  %>
       </p>
@@ -16,7 +16,7 @@
     <li>
       <p>
         <%= link_to dislike_movie_review_path(@movie, review), method: :put do %>
-        downvote
+        &#x21E9;
         <%= review.get_downvotes.size %>
         <%end  %>
       </p>

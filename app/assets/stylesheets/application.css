@@ -33,6 +33,7 @@ body {
   margin: auto;
   width: 900px;
   line-height: 145%;
+  height: 1000px;
 }
 
 #vote-button-links {
@@ -91,7 +92,7 @@ table {
   padding-top: 140px;
 }
 
-<<<<<<< HEAD
+
 .genre-select{
   width: 800px;
   height: 20px;

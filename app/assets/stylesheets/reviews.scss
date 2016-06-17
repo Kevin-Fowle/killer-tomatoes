@@ -1,21 +1,47 @@
 .indiv-review-box {
-  width:650px;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 20px;
+  width:500px;
+
+}
+
+table {
+  margin-top: 0;
+}
+.review-all-title {
+  border-bottom: 2px double black;
+  width: 200px;
+}
+
+.reviews-container {
+  width: 500px;
+}
+.voting {
+  float: right;
+}
+
+.review-title > a {
+  color: darkgray;
+  font-size: 20px;
+  padding-bottom: 0;
 }
 .review-body {
-  
+  width: 550px;
+}
+
+.tomato-icon {
+  display: inline-block;
 }
 
 .review-author {
   margin-top: 10px;
+  display: inline-block;
+  height: 20px;
+  margin-bottom: 1%;
 }
 
 .review-score {
-
+  margin-top: 0;
+  font-size: 15px;
+  color: gray;
 }
 
 .indiv-comment-container{
@@ -41,7 +67,11 @@ textarea#comment_body {
   width: 650px;
   height: 100px;
 }
-
+.vote-container {
+  display: inline-block;
+  float: right;
+  text-align: center;
+}
 
 /*------new review -----------------*/
 
