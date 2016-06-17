@@ -33,6 +33,7 @@ body {
   margin: auto;
   width: 900px;
   line-height: 145%;
+  height: 1000px;
 }
 
 #vote-button-links {
@@ -115,11 +116,4 @@ select#movie_genre_name{
   color: red;
   font-size: 15px;
 
-}
-
-.footer {
-  width: 900px;
-  height:40px;
-  background: #c90404;
-  margin-top: 50px;
 }
