@@ -1,3 +1,5 @@
+require 'faker'
+
 Movie.create(title: "I Love You, Man", image: "https://upload.wikimedia.org/wikipedia/en/4/42/I_Love_You,_Man.jpg", description: "Friendless Peter Klaven goes on a series of man-dates to find a Best Man for his wedding. But, when his insta-bond with his new B.F.F. puts a strain on his relationship with his fiancée, can the trio learn to live happily ever after?", genre:'comedy')
 
 Movie.create(title: "Return of the Killer Tomatoes", image: "http://assets.flicks.co.nz/images/movies/poster/90/90610aa0e24f63ec6d2637e06f9b9af2_500x735.jpg", description: "Crazy old Professor Gangreen has developed a way to make tomatoes look human for a second invasion.", genre:'sci-fi' )
@@ -81,10 +83,10 @@ User.create(name:'Milhouse', email: 'milhouse@milhouse.com', password_digest:'pa
 users = User.all
 movies = Movie.all
 
-reviews = 50.times.map do
-  Review.create!( :title => Faker::Hipster.word,
+50.times do
+  Review.create!( :title => Faker::Hipster.sentence,
                   :body => Faker::Hipster.paragraph(10),
-                  :score => Faker::Numer.between(1,5),
+                  :score => Faker::Number.between(1,5),
                   reviewer: users.sample,
                   movie: movies.sample)
 end
