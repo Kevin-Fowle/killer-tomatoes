@@ -1,5 +1,9 @@
 require 'faker'
 
+User.delete_all
+Review.delete_all
+Movie.delete_all
+
 Movie.create(title: "I Love You, Man", image: "https://upload.wikimedia.org/wikipedia/en/4/42/I_Love_You,_Man.jpg", description: "Friendless Peter Klaven goes on a series of man-dates to find a Best Man for his wedding. But, when his insta-bond with his new B.F.F. puts a strain on his relationship with his fiancée, can the trio learn to live happily ever after?", genre:'comedy')
 
 Movie.create(title: "Return of the Killer Tomatoes", image: "http://assets.flicks.co.nz/images/movies/poster/90/90610aa0e24f63ec6d2637e06f9b9af2_500x735.jpg", description: "Crazy old Professor Gangreen has developed a way to make tomatoes look human for a second invasion.", genre:'sci-fi' )
@@ -49,15 +53,7 @@ Movie.create(title: "Slumdog Millionaire", image: "http://ia.media-imdb.com/imag
 
 Movie.create(title: "Vicky Cristina Barcelona", image: "http://ia.media-imdb.com/images/M/MV5BMTU2NDQ4MTg2MV5BMl5BanBnXkFtZTcwNDUzNjU3MQ@@._V1_.jpg", description: "Two girlfriends on a summer holiday in Spain become enamored with the same painter, unaware that his ex-wife, with whom he has a tempestuous relationship, is about to re-enter the picture.", genre:'romance' )
 
-Review.create(title: "Funny movies have to be funny. That's the only rule.",  body: "Funny movies have to be funny. That's the only rule about funny movies. They don't have to live up to any expectations, they can be about the same thing that movies always are. It really doesn't matter. As long as they are funny.
-
-I Love You, Man is a funny movie. In case the plot is of any interest to you, it's about this guy (Paul Rudd) who is getting married to this woman (Rashida Jones), but he realizes that he doesn't really have any male friends to fill out his side of the wedding party. So he starts on a quest with the aid of his brother (Andy Samberg) to find a best man. When he finally thinks he finds one (Jason Segel), hilarity ensues.
-
-On the spectrum of comedies, this is a bro movie. One made basically for guys, a little raunchy. But honestly, it's not too R-rated. It cusses a bit, discusses sex a lot, things like that. But not nearly as R-rated as say... Role Models, which I feel is sort of along the same lines. Comparable at least. They are both very funny movies, and both have Paul Rudd.
-
-But this is about I Love You, Man. The highlight of the movie, for me, is Thomas Lennon as Doug. I have been a fan of his for a long time, at least since Reno 911 came out. Which is a brilliant show. Paul Rudd is very, very cute, but not always convincing, the same with Rashida Jones as his fiancée. It's a movie that Ben Stiller would have made if he were younger. Jason Segel does what Jason Segel does. He plays his role very capably as Sydney, the crazed friend.
-
-And that is I Love You, Man. It's a rather simple, but funny movie.", score: 7, reviewer_id: 1, movie_id: 1)
+Review.create(title: "Yuck!",  body: "Thbbbbbbbbbbbbbbbbt!!!!!!!!!!!!", score: 0, reviewer_id: 1, movie_id: 1)
 
 Review.create(title: "Funny movies have to be funny. That's the only rule.", body:"Funny movies have to be funny. That's the only rule about funny movies. They don't have to live up to any expectations, they can be about the same thing that movies always are. It really doesn't matter. As long as they are funny.
 
@@ -67,7 +63,7 @@ On the spectrum of comedies, this is a bro movie. One made basically for guys, a
 
 But this is about I Love You, Man. The highlight of the movie, for me, is Thomas Lennon as Doug. I have been a fan of his for a long time, at least since Reno 911 came out. Which is a brilliant show. Paul Rudd is very, very cute, but not always convincing, the same with Rashida Jones as his fiancée. It's a movie that Ben Stiller would have made if he were younger. Jason Segel does what Jason Segel does. He plays his role very capably as Sydney, the crazed friend.
 
-And that is I Love You, Man. It's a rather simple, but funny movie.", score: 7, reviewer_id: 2, movie_id: 1)
+And that is I Love You, Man. It's a rather simple, but funny movie.", score: 5, reviewer_id: 2, movie_id: 1)
 
 User.create(name:'Kanye', email: 'Kanye@kanye.gov', password_digest:'password')
 User.create(name:'Gary', email: 'Garybusey@gmail.com', password_digest:'password')
@@ -83,10 +79,14 @@ User.create(name:'Milhouse', email: 'milhouse@milhouse.com', password_digest:'pa
 users = User.all
 movies = Movie.all
 
-50.times do
+reviews = 50.times.map do
   Review.create!( :title => Faker::Hipster.sentence,
                   :body => Faker::Hipster.paragraph(10),
                   :score => Faker::Number.between(1,5),
                   reviewer: users.sample,
                   movie: movies.sample)
+end
+
+200.times do
+  reviews.sample.liked_by users.sample
 end
