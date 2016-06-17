@@ -9,6 +9,13 @@ class Movie < ActiveRecord::Base
   def killer_score
     killer_reviews = self.reviews.select {|review|
         review.reviewer.status == "Killer" }
-    killer_reviews.empty? ? 0 : killer_reviews.average(:score).round(1)
+    total = 0
+    killer_reviews.each do |review|
+      total += review.score
+    end
+    killer_reviews.length == 0 ? 0 : (total / killer_reviews.length)
+
+    # killer_reviews.empty? ? 0 : killer_reviews.average(:score).round(1)
   end
+
 end

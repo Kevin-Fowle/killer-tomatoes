@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
     case
     when net_trust_score >= 5
       "Killer"
-    when net_trust_score >= 2
+    when net_trust_score >= 3
       "Red"
     when net_trust_score <= -5
       "Untrustworthy"

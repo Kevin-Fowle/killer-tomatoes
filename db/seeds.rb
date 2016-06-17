@@ -76,10 +76,16 @@ User.create(name:'Moe', email: 'moe@moe.com', password_digest:'password')
 User.create(name:'Krusty', email: 'krusty@krusty.com', password_digest:'password')
 User.create(name:'Milhouse', email: 'milhouse@milhouse.com', password_digest:'password')
 
+20.times do
+  User.create!(:name => Faker::Name.first_name, :email => Faker::Internet.email, password_digest: 'password')
+
+end
+
+
 users = User.all
 movies = Movie.all
 
-reviews = 50.times.map do
+reviews = 100.times.map do
   Review.create!( :title => Faker::Hipster.sentence,
                   :body => Faker::Hipster.paragraph(10),
                   :score => Faker::Number.between(1,5),
@@ -87,6 +93,6 @@ reviews = 50.times.map do
                   movie: movies.sample)
 end
 
-200.times do
+500.times do
   reviews.sample.liked_by users.sample
 end
