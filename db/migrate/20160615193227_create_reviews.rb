@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.string :title
       t.text :body
-      t.integer :score
+      t.integer :score, null: false, default: 0
       t.integer :reviewer_id
       t.integer :movie_id
 
