@@ -1,8 +1,8 @@
 
-<div>
-<%= form_for :movie, url: genres_search_path do |f| %>
-  <%= f.select :genre_name, ["Genre","Action","Comedy","Drama","Fantasy","Romance","Sci-Fi", "Thriller"], :class => "genre-drop" %>
-  <%= f.submit "Search"%>
+<div class='genre-select'>
+<%= form_for :movie, :class => "formform", url: genres_search_path do |f| %>
+  <%= f.select :genre_name, ["Search by Genre","Action","Comedy","Drama","Fantasy","Romance","Sci-Fi", "Thriller"], :class => "genre-drop", :disabled => "Search by Genre", :selected => "Search by Genre" %></br>
+  <%= f.submit "Search", :class => "genre-select-button"%>
 <% end %>
 </div>
 <% @movies.each do |movie| %>
