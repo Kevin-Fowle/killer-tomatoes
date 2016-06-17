@@ -6,9 +6,9 @@ class Movie < ActiveRecord::Base
     self.reviews.average(:score).round(1)
   end
 
-  def gold_score
-    gold_reviews = self.reviews.select {|review|
-        review.reviewer.status == "Gold" }
-    gold_reviews.average(:score).round(1)
+  def killer_score
+    killer_reviews = self.reviews.select {|review|
+        review.reviewer.status == "Killer" }
+    killer_reviews.average(:score).round(1)
   end
 end
