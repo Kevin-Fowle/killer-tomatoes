@@ -70,3 +70,12 @@ And that is I Love You, Man. It's a rather simple, but funny movie.", score: 7, 
 User.create(name:'Kanye', email: 'Kanye@kanye.gov', password_digest:'password')
 
 User.create(name:'Gary', email: 'Garybusey@gmail.com', password_digest:'password')
+
+User.create(name:'Homer', email: 'homer@homer.com', password_digest:'password')
+User.create(name:'Marge', email: 'marge@marge.com', password_digest:'password')
+User.create(name:'Bart', email: 'bart@bart.com', password_digest:'password')
+User.create(name:'Lisa', email: 'lisa@lisa.com', password_digest:'password')
+User.create(name:'Maggie', email: 'maggie@maggie.com', password_digest:'password')
+User.create(name:'Moe', email: 'moe@moe.com', password_digest:'password')
+User.create(name:'Krusty', email: 'krusty@krusty.com', password_digest:'password')
+User.create(name:'Milhouse', email: 'milhouse@milhouse.com', password_digest:'password')
