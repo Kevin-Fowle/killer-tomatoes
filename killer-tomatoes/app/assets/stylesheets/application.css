@@ -13,6 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+ .user-form {
+   display: flex;
+   width: 900px;
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   padding-top: 100px;
+   -webkit-flex-flow: row wrap;
+   justify-content: space-around;
+ }
 header{
 
   font-family: Helvetica Neue;
@@ -28,7 +40,6 @@ body {
   margin: auto;
   width: 900px;
   line-height: 145%;
-
 }
 
 #vote-button-links {
