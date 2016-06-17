@@ -6,6 +6,8 @@ class Review < ActiveRecord::Base
   has_many :comments
   has_many :commenters, through: :comments
 
+  validates :title, presence: true
+
   # @Lucas - future_implementation, hiding of comments below a certain threshold
   # def qualified
   #   self.votes_for.size >= 5

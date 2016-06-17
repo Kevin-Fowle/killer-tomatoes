@@ -4,8 +4,11 @@ class User < ActiveRecord::Base
   has_many :reviews, foreign_key: 'reviewer_id'
   has_many :reviewed_movies, through: :reviews, source: :movie
   has_many :comments, foreign_key: "commenter_id"
-  
+
   has_secure_password
+
+  validates :email, presence: true, uniqueness: true
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
 
   def num_trusted_reviews
     self.reviews.select {|review| review.trusted}.length
