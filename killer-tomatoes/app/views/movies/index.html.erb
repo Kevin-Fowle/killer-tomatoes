@@ -1,15 +1,3 @@
 <div class="all-movies-container">
-  <div>
-  <%= form_for :movie, url: "/" do |f| %>
-    <%= f.select :genre, ["Genre","Action","Comedy","Drama","Fantasy","Romance","Sci-Fi", "Thriller"] %>
-    <%= f.submit "Search"%>
-  <% end %>
-</div>
-  <% @movies.each do |movie| %>
-    <div class='movie-image-container'>
-      <a href="/movies/<%=movie.id%> "><img src= '<%= movie.image %>' class='movie-image' alt= '<%= movie.title %>' /></a>
-      <% link_to "<img src= 'movie.image' class='movie-image' alt= 'movie.title'/>", movie_path(movie) %>
-
-    </div>
-  <% end %>
+<%= render '/movies/movie_display' %>
 </div>

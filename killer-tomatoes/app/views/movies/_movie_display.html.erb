@@ -1,0 +1,13 @@
+
+<div>
+<%= form_for :movie, url: genres_search_path do |f| %>
+  <%= f.select :genre_name, ["Genre","Action","Comedy","Drama","Fantasy","Romance","Sci-Fi", "Thriller"], :class => "genre-drop" %>
+  <%= f.submit "Search"%>
+<% end %>
+</div>
+<% @movies.each do |movie| %>
+  <div class='movie-image-container'>
+    <a href="/movies/<%=movie.id%> "><img src= '<%= movie.image %>' class='movie-image' alt= '<%= movie.title %>' /></a>
+    <% link_to "<img src= 'movie.image' class='movie-image' alt= 'movie.title'/>", movie_path(movie) %>
+  </div>
+<% end %>
