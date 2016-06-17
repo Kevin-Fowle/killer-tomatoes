@@ -2,7 +2,7 @@
     <table>
       <tr>
         <% if logged_in? %>
-          <td class="nav-buttons"> Hello<%= link_to("#{current_user.name}", user_path(current_user))%> | </td>
+          <td class="nav-buttons"><%= link_to("Hello, #{current_user.name}", user_path(current_user))%> | </td>
         <% else %>
           <td class="nav-buttons"> <%= link_to("Register", new_user_path)%> | </td>
           <td class="nav-buttons"> <%= link_to("Login", new_session_path)%> | </td>
