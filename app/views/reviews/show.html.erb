@@ -1,3 +1,5 @@
+<div class="under-nav-bar">
+
 <%= render '/movies/movieinfo' %>
 <div class="review-header">
   <h2>Review</h2>
@@ -38,7 +40,8 @@
 <div class="new-comment-container">
   <%= form_for :comment, url: movie_review_comments_path(@movie, @review) do |f| %>
     Comment:<br>
-    <%= f.text_area :body%><br>
+    <%= f.text_field :body%><br>
     <%= f.submit "Comment" %>
   <% end %>
+</div>
 </div>
