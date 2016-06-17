@@ -2,14 +2,16 @@
   <div class="movie-header">
     <h1><%= @movie.title %></h1>
   </div>
-
-  <div class="movie-profile-pic-container">
-    <a href="/movies/<%= @movie.id %>"><img src="<%=@movie.image %>" class='movie-profile-pic' alt="<%=@movie.title %>" /></a>
-  </div>
-
+  
   <div class="movie-description-container">
     <p class="movie-description">
       <%= @movie.description %>
     </p>
   </div>
+
+  <div class="movie-profile-pic-container">
+    <a href="/movies/<%= @movie.id %>"><img src="<%=@movie.image %>" class='movie-profile-pic' alt="<%=@movie.title %>" /></a>
+  </div>
+
+
 </div>
