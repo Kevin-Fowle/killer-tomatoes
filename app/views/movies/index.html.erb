@@ -1,14 +1,5 @@
 <div class="all-movies-container">
-  <% @movies.each do |movie| %>
-    <div class='movie-image-container'>
-      <a href="/movies/<%=movie.id%> "><img src= '<%= movie.image %>' class='movie-image' alt= '<%= movie.title %>' /></a>
-      <% link_to "<img src= 'movie.image' class='movie-image' alt= 'movie.title'/>", movie_path(movie) %>
-      <div class='movie-score-container'>
-        <p><%= image_tag('green_tomato.png', size: "50x50") %> <%= movie.overall_score %>%
-          <%= image_tag('killer_tomato_icon.jpeg',size: "50x50") %> <%= movie.killer_score %>%</p>
-        </div>
-    </div>
-  <% end %>
+
 
 <%= render '/movies/movie_display' %>
 
