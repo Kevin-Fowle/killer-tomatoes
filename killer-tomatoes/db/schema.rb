@@ -28,27 +28,19 @@ ActiveRecord::Schema.define(version: 20160616161450) do
     t.string   "title"
     t.string   "image"
     t.text     "description"
+    t.string   "genre"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "ratings", force: :cascade do |t|
-    t.integer  "rater_id"
-    t.integer  "review_id"
-    t.integer  "helpful_score"
-    t.integer  "agree_score"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
-    t.integer  "score"
+    t.integer  "score",       default: 0, null: false
     t.integer  "reviewer_id"
     t.integer  "movie_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "users", force: :cascade do |t|
