@@ -1,6 +1,6 @@
 <div class="under-nav-bar">
 <%= render '/movies/movieinfo' %>
-
+  <%= render '/errors' %>
   <%= form_for :review, url: movie_reviews_path do |f| %>
 
   <div>Header: <%= f.text_area :title %></div>

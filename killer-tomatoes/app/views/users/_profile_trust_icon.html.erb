@@ -1,0 +1,10 @@
+
+<% if @user.status == "Killer" %>
+  <%= image_tag("killer_tomato_icon.png", size: "35x35", alt: "Gold User") %>
+<% elsif @user.status == "Red" %>
+  <%= image_tag("orange_tomato.png", size: "35x35", alt: "Silver User") %>
+<% elsif @user.status == "Green" %>
+  <%= image_tag("green_tomato.png", size: "35x35", alt: "Tomato User") %>
+<% else @user.status == "Untrustworthy" %>
+  <%= image_tag("gray_tomato.png", size: "35x35", alt: "Untrusted User") %>
+<%end%>

@@ -91,6 +91,7 @@ table {
   padding-top: 140px;
 }
 
+<<<<<<< HEAD
 .genre-select{
   width: 800px;
   height: 20px;
@@ -105,9 +106,13 @@ select#movie_genre_name{
   border: none;
 }
 
-
 .genre-select-button{
   width: 300px;
 }
 
-/*---------*/
+
+.error {
+  color: red;
+  font-size: 15px;
+
+}
