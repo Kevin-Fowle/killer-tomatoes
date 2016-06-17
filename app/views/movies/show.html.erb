@@ -14,7 +14,7 @@
         <h4 class="review-title"> <%= link_to review.title, movie_review_path(@movie, review) %> </h4>
       </div>
       <div class="review-score">
-        Score: <%= review.score%>/10
+        Score: <%= review.score%>/5
       </div>
 
       <%= render partial: '/users/user_trust_icon', :locals => {:review => review} %>
