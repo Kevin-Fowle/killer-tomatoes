@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'faker', '1.6.3'
-
+gem 'http'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
