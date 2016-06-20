@@ -1,6 +1,6 @@
 <%= form_for :movie, html: {id: 'new-movie-form'}, url: '/movies' do |f| %>
 
-  Title: <%= f.text_field :title %>
+  Title: <%= f.text_field :title, size: 50 %>
   <%= f.submit 'Submit', class: 'form-button' %>
 
 <% end %>

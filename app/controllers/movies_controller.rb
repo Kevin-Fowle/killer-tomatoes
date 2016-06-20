@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
 
   def create
     @movie_info = get_movie_info(params[:movie][:title])
-    if @movie_info["Response"] == "False"
+    if @movie_info["Response"] == "False" || @movie_info["Type"] != "movie"
         @errors = ["Title Not Found!"]
         render :new
      else
