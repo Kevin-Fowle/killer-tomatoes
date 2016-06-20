@@ -5,7 +5,7 @@ module MoviesHelper
 
   def get_movie_info(title)
     p_title = title.gsub(/\s/, '+')
-    JSON.parse(HTTP.get("http://www.omdbapi.com/?t=#{p_title}&y=&plot=short&r=json"))
+    JSON.parse(HTTP.get("http://www.omdbapi.com/?t=#{p_title}&y=&plot=full&r=json"))
   end
 
 end

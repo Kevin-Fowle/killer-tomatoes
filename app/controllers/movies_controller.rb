@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
-
-  before_filter 'authorize', :only => [:new, :show]
+  include MoviesHelper
+  before_filter 'authorize', :only => [:new, :create]
 
   def index
     @movies = Movie.all
@@ -16,19 +16,22 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie_info = get_movie_info(params[:title])
-    @movie = Movie.new(title: @movie_info["Title"],
-                       genre: @movie_info["Genre"],
-                       description: @movie_info["Plot"])
-    p @movie_info                   
-    if request.xhr?
-      content_type :json
-      { title: @movie_info["Title"],
-        genre: @movie_info["Genre"],
-        description: @movie_info["Plot"]}.to_json
-      else
-        redirect_to root_path
-      end
+    @movie_info = get_movie_info(params[:movie][:title])
+    if @movie_info["Response"] == "False"
+        @errors = ["Title Not Found!"]
+        render :new
+     else
+        @movie = Movie.new(title: @movie_info["Title"],
+                           genre: @movie_info["Genre"],
+                           description: @movie_info["Plot"],
+                           image: @movie_info["Poster"])
+        if @movie.save
+            redirect_to new_movie_review_path(@movie)
+          else
+            @errors = @movie.errors.full_messages
+            render :new
+        end
+    end
   end
 
 
