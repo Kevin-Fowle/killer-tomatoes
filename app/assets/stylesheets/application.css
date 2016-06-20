@@ -51,6 +51,7 @@ a {
   position: fixed;
   display: flex;
   justify-content: flex-end;
+  border-radius: 3px;
 }
 
 
@@ -94,7 +95,7 @@ table {
 
 
 .genre-select{
-  width: 800px;
+  width: 400px;
   height: 20px;
   text-align: center;
   padding-top: 20px;
@@ -110,6 +111,21 @@ select#movie_genre_name{
 .genre-select-button{
   width: 300px;
 }
+
+.new-movie-buttons {
+  width: 380px;
+  background: #c90404;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+  color: white;
+}
+
+.new-movie-buttons a:link {
+  text-decoration: none;
+}
+
+
 
 
 .error {

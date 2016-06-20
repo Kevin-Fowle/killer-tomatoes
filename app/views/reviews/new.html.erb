@@ -7,7 +7,7 @@
   <div>Header:<br> <%= f.text_field :title %></div>
 
   <div>Score: <%= f.select :score, [1,2,3,4,5] %></div>
-  <div><%= f.text_field :body %></div>
+  <div><%= f.text_area :body %></div>
 
   <%= f.hidden_field :movie_id, value: @movie.id %>
   <%= f.hidden_field :reviewer_id, value: current_user.id %>

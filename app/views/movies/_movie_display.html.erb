@@ -1,10 +1,24 @@
+<table>
+  <tr>
+    <td>
+      <div class='genre-select'>
+      <%= form_for :movie, :class => "formform", url: genres_search_path do |f| %>
+        <%= f.select :genre_name, ["Search by Genre","Action","Comedy","Drama","Fantasy","Romance","Sci-Fi", "Thriller"], :class => "genre-drop", :disabled => "Search by Genre", :selected => "Search by Genre" %></br>
+        <%= f.submit "Search", :class => "genre-select-button"%>
+      <% end %>
+      </div>
+    </td>
 
-<div class='genre-select'>
-<%= form_for :movie, :class => "formform", url: genres_search_path do |f| %>
-  <%= f.select :genre_name, ["Search by Genre","Action","Comedy","Drama","Fantasy","Romance","Sci-Fi", "Thriller"], :class => "genre-drop", :disabled => "Search by Genre", :selected => "Search by Genre" %></br>
-  <%= f.submit "Search", :class => "genre-select-button"%>
-<% end %>
-</div>
+    <td>
+      <div class='new-movie-buttons'>
+        <%= link_to("Can't Find a Movie?  Be the First to Review It!", new_movie_path)%>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+
 <% @movies.each do |movie| %>
   <div class='movie-image-container'>
     <a href="/movies/<%=movie.id%> "><img src= '<%= movie.image %>' class='movie-image' alt= '<%= movie.title %>' /></a>

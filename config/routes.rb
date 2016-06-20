@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
 
-  resources :movies, only: [:show] do
+  resources :movies, only: [:show, :new, :create] do
     resources :reviews, only: [:show, :new, :create] do
       member do
         put "like", to: "reviews#upvote"
@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   end
   root 'movies#index'
 
-  resources :reviews
 
   get '/genres/:genre_name', to: 'genres#show', as: 'genre'
   post '/genres/search', to: "genres#search"
