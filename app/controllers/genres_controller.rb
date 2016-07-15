@@ -1,7 +1,6 @@
 class GenresController < ApplicationController
   def search
     @genre_name = params[:movie][:genre_name].downcase
-    p @genre_name
     redirect_to "/genres/#{@genre_name}"
   end
 

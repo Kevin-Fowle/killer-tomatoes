@@ -2,7 +2,13 @@
   <div class="movie-header">
     <h1><%= @movie.title %></h1>
   </div>
-  
+
+  <div class="movie-genre-container">
+    <p class="movie-genre">
+      <%= @movie.genre %>
+    </p>
+  </div>
+
   <div class="movie-description-container">
     <p class="movie-description">
       <%= @movie.description %>
